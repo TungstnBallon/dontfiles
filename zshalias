@@ -1,0 +1,5 @@
+#untar
+alias untar='tar -zxvf'
+
+#delete
+alias del='rm -rf'
