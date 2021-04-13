@@ -17,10 +17,25 @@ runtime! archlinux.vim
 " do not load defaults if ~/.vimrc is missing
 "let skip_defaults_vim=1
 
-
+" Syntaxhighlighting
 syntax on
 
+" Dark background
 set background=dark
+
+" Set line numbers by default
+set number
+
+" Set tab spacing
+set tabstop=4
+set softtabstop=4
+
+" Set tabs to spaces
+set expandtab
+
+"search as chars entered and highlight
+set incsearch
+set hlsearch
 
 set showmatch	" shows matching brackets
 set smartcase	" Do smartcase matching

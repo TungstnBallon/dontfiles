@@ -14,6 +14,7 @@ antigen use oh-my-zsh
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
+alias i3config="vim ~/.i3/config"
 
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
@@ -57,6 +58,9 @@ export EDITOR=/usr/bin/vim
 
 #add custom aliases
 source ~/.zshalias
+
+#add cargo packages to path
+export PATH=/home/jonas/.cargo/bin:$PATH
 
 ### ZNT's installer added snippet ###
 	fpath=( "$fpath[@]" "$HOME/.config/znt/zsh-navigation-tools" )

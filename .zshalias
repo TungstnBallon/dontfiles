@@ -3,3 +3,6 @@ alias untar='tar -zxvf'
 
 #delete
 alias del='rm -rf'
+
+#1password signin
+alias 1pass='export OP_SESSION_my="$(op signin my --raw)"'
