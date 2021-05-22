@@ -38,7 +38,6 @@ antigen bundles <<DEVBUNDLE
 DEVBUNDLE
 antigen bundles <<TERMBUNDLE
         zsh-users/zsh-autosuggestions
-        autojump
         psprint/zsh-navigation-tools
 TERMBUNDLE
 
