@@ -21,7 +21,7 @@ runtime! archlinux.vim
 syntax on
 
 " Dark background
-set background=dark
+" set background=dark
 
 " Set line numbers by default
 set number
