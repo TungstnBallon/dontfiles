@@ -1,4 +1,4 @@
-#load antigen
+#load antigen TEST
 source /usr/share/zsh/share/antigen.zsh
 antigen init dontfiles/.antigenrc
 
