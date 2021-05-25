@@ -2,9 +2,13 @@ antigen use oh-my-zsh
 
 #antigen plugins
 antigen bundles <<ALIASBUNDLE
-    common-aliases                          #common aliases
-    archlinux                               #aliases for arch
-    sudo                                    #douple-press ESC to toggle sudo in front of previous command
+        alias-finder                            #type command to find associated alias
+        common-aliases
+        archlinux                               #aliases for arch
+        MichaelAquilina/zsh-you-should-use      #suggests aliases after erxecuting command
+        sudo                                    #press escape twice to execute command wirh sudo in front
+        git                                     #aliases and shortcuts for git
+        pip                                     #for python
 ALIASBUNDLE
 
 #confirm antigen config

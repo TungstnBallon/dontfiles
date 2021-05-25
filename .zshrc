@@ -18,7 +18,7 @@ fi
 #load antigen
 if [[ -e /home/jonas/dontfiles/.antigenrc ]]; then
     source /usr/share/zsh/share/antigen.zsh
-    antigen init dontfiles/.antigenrc
+    antigen init /home/jonas/dontfiles/.antigenrc
 fi
 
 #load additional zsh-plugins
