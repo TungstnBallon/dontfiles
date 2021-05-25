@@ -1,0 +1,13 @@
+$plugdir=/usr/share/zsh/plugins
+
+#recommends aliases for commands
+source $plugdir/zsh-you-should-use/you-should-use.plugin.zsh
+
+#xtracts all sorts of archives
+source $plugdir/zsh-extract/extract.plugin.zsh
+
+#faster syntax highlighting
+source $plugdir/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+
+
+

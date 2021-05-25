@@ -20,3 +20,8 @@ if [[ -e /home/jonas/dontfiles/.antigenrc ]]; then
     source /usr/share/zsh/share/antigen.zsh
     antigen init dontfiles/.antigenrc
 fi
+
+#load additional zsh-plugins
+if [[ -e /home/jonas/dontfiles/.zshplug ]]; then
+    source /home/jonas/dontfiles/.zshplug
+fi
