@@ -9,6 +9,8 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
 
+#------------------------Custom Changes-------------------
+
 #load custom aliases
 if [[ -e /home/jonas/.zshalias ]]; then
   source /home/jonas/.zshalias
@@ -25,3 +27,7 @@ fi
 if [[ -e /home/jonas/dontfiles/.zshplug ]]; then
     source /home/jonas/dontfiles/.zshplug
 fi
+
+#set default editor to vim
+export VISUAL=vim
+export EDITOR="$VISUAL"
