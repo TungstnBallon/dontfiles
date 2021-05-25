@@ -1,4 +1,4 @@
-$plugdir=/usr/share/zsh/plugins
+plugdir=/usr/share/zsh/plugins
 
 #recommends aliases for commands
 source $plugdir/zsh-you-should-use/you-should-use.plugin.zsh
