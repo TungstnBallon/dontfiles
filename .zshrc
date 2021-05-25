@@ -1,8 +1,3 @@
-#load antigen TEST
-source /usr/share/zsh/share/antigen.zsh
-antigen init dontfiles/.antigenrc
-
-
 # Use powerline
 USE_POWERLINE="true"
 # Source manjaro-zsh-configuration

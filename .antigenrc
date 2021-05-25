@@ -4,7 +4,6 @@ antigen use oh-my-zsh
 antigen bundles <<ALIASBUNDLE
     common-aliases                          #common aliases
     archlinux                               #aliases for arch
-    MichaelAquiliana/zsh-you-should-use     #suggests aliases
     sudo                                    #douple-press ESC to toggle sudo in front of previous command
 ALIASBUNDLE
 
