@@ -1,11 +1,9 @@
+#path to plugin directory
 plugdir=/usr/share/zsh/plugins
-
 
 #xtracts all sorts of archives
 source $plugdir/zsh-extract/extract.plugin.zsh
 
 #faster syntax highlighting
 source $plugdir/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-
-
 
