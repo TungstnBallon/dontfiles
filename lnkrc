@@ -1,0 +1,27 @@
+#!/bin/zsh
+
+dontfiles=~/dontfiles
+if [[ $# -gt 1 ]] then; #too many arguments
+    echo "Usage: $0 [path to your dotfiles]"
+elif [[ $# -eq 1 ]] then; #one argument
+    if [[ $1 -eq "-h" -o $1 -eq "--help" ]] then; #print help
+        echo "Usage: $0 [path to your dotfiles]\nBacks up .zshrc and .vimrc and creates symbolic links to these files in ~\nThe default location is ~/dontfiles"
+    else #set dontfiles path
+        dontfiles="$1"
+
+#remove symlinks form path
+dontfiles=$(realpath -e "$1")
+
+if [[ -e ~/.zshrc -a -e $dontfiles/.zshrc ]]; then
+    mv ~/.zshrc ~/.zshrc.pre-lnkrc
+    ln -s $dontfiles/.zshrc ~/.zshrc
+else
+    echo ".zshrc doesn't exist in ~ or $dontfiles"
+fi
+
+if [[ -e ~/.vimrc -a -e $dontfiles/.vimrc ]]; then
+    mv ~/.vimrc ~/.vimrc.pre-lnkrc
+    ln -s $dontfiles/.vimrc ~/.vimrc
+else
+    echo ".vimrc doesn't exist in ~ or $dontfiles"
+fi
