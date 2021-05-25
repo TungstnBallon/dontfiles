@@ -18,3 +18,10 @@ fi
 if [[ -e /home/jonas/.zshalias ]]; then
   source /home/jonas/.zshalias
 fi
+
+
+#load antigen
+if [[ -e /home/jonas/dontfiles/.antigenrc ]]; then
+    source /usr/share/zsh/share/antigen.zsh
+    antigen init dontfiles/.antigenrc
+fi
