@@ -1,9 +1,6 @@
 #aliases for ls
-alias ll='ls -l'
-alias la='ls -la'
-
-#untar
-alias untar='tar -zxvf'
+alias ll='ls -l --color=auto'
+alias la='ls -la --color=auto'
 
 #delete
 alias del='rm -rf'
