@@ -11,21 +11,24 @@ fi
 
 #------------------------Custom Changes-------------------
 
+#path to dontfiles
+export DOTS=$(realpath ~/dontfiles)
+
 #load custom aliases
-if [[ -e /home/jonas/dontfiles/.zshalias ]]; then
-  source /home/jonas/dontfiles/.zshalias
+if [[ -e $DOTS/.zshalias ]]; then
+  source $DOTS/.zshalias
 fi
 
 
 #load antigen
-if [[ -e /home/jonas/dontfiles/.antigenrc ]]; then
+if [[ -e $DOTS/.antigenrc ]]; then
     source /usr/share/zsh/share/antigen.zsh
-    antigen init /home/jonas/dontfiles/.antigenrc
+    antigen init $DOTS/.antigenrc
 fi
 
 #load additional zsh-plugins
-if [[ -e /home/jonas/dontfiles/.zshplug ]]; then
-    source /home/jonas/dontfiles/.zshplug
+if [[ -e $DOTS/.zshplug ]]; then
+    source $DOTS/.zshplug
 fi
 
 #set default editor to vim
