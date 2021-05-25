@@ -1,9 +1,0 @@
-#aliases for ls
-alias ll='ls -l'
-alias la='ls -la'
-
-#untar
-alias untar='tar -zxvf'
-
-#delete
-alias del='rm -rf'
