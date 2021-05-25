@@ -12,8 +12,8 @@ fi
 #------------------------Custom Changes-------------------
 
 #load custom aliases
-if [[ -e /home/jonas/.zshalias ]]; then
-  source /home/jonas/.zshalias
+if [[ -e /home/jonas/dontfiles/.zshalias ]]; then
+  source /home/jonas/dontfiles/.zshalias
 fi
 
 
