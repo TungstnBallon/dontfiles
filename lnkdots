@@ -1,0 +1,80 @@
+#!/bin/zsh
+
+#DOTFILES TO REPLACE. ADD OR REMOVE FILENAMES AS YOU LIKE
+dotfls=(".zshrc" ".vimrc")
+
+
+#HELP
+use="Usage: $0 [OPTIONS] [PATH TO DOTFILES]"
+help="$use\nReplaces ${dotfls[@]} in the home directory with symbolic links to those dotfiles in another dirctory\n\nOPTIONS:\n\t--no-backup\t\tif dotfiles already exist in the home directory they'll be overwritten\n\r\t-S, --suffix <SUFFIX>\t\tfile suffix for created backups. .pre-lnkdots is the default\n\r\t-h, --help\t\tPrint this output"
+
+#Default Values
+backup=true
+suffix=.pre-lnkdots
+
+
+#Parse input
+if [[ $# -gt 2 ]]; then
+    echo $use
+fi
+while [[ $# -gt 0 ]]
+do
+    case $1 in
+        (-h|--help))
+            echo "$help"
+            exit 1
+            ;;
+        --no-backup)
+            backup=false
+            shift
+            ;;
+        (-S|--suffix))
+            suffix=$2
+            shift 2
+            ;;
+        *)
+            if [[ ! -d $1 ]] then;
+                echo "$1 isn't a directory or doesn't exist\n$use"
+                exit 1
+            fi
+            argpath=$(realpath -e "$1")
+            #if [[ $# -gt 1]] then;
+            #    echo $use
+            #    exit 1
+            #fi
+            shift
+            ;;
+    esac
+done 
+
+#Set the path to dotfiles
+if [[ -v argpath ]]; then
+    DOTS="$argpath"
+elif [[ -v DOTS ]]; then
+    echo "Linking ${dotfls[@]} to dotfiles in "$DOTS"..."
+else
+    DOTS=$(realpath -e ~/dontfiles)
+    echo "Linking ${dotfls[@]} to dotfiles in default path "$DOTS"..."
+fi
+
+
+#replace each file
+for rc in "${dotfls[@]}"; do
+    if [[ -e $DOTS/$rc ]]; then
+        if [[ $backup = true ]]; then
+            ln -sb --suffix=$suffix $DOTS/$rc ~/$rc
+        else
+            ln -sf $DOTS/$rc ~/$rc
+        fi
+        echo "Linked ~/$rc to $DOTS/$rc"
+    else
+        echo "$rc doesn't exist in $DOTS"
+    fi
+done
+
+if [[ $backup = true ]] ; then
+    echo "Preexisting files were backed up with suffix $suffix"
+else
+    echo "Preexisting files were overwritten"
+fi
+
