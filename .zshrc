@@ -12,7 +12,7 @@ fi
 #------------------------Custom Changes-------------------
 
 #path to dontfiles
-export DOTS=$(realpath ~/dontfiles)
+export DOTS=$(realpath -e ~/dontfiles)
 
 #load antigen
 if [[ -e $DOTS/.antigenrc ]]; then
