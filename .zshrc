@@ -29,6 +29,11 @@ if [[ -e $DOTS/.zshalias ]]; then
   source $DOTS/.zshalias
 fi
 
+#if logged in as root change theme which makes this more noticable
+if [[ $USER = "root" && -e $DOTS/p10k-root.zsh ]]; then
+    source $DOTS/p10k-root.zsh
+fi
+
 #set default editor to vim
 export VISUAL=vim
 export EDITOR="$VISUAL"
