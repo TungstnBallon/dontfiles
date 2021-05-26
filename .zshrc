@@ -31,7 +31,7 @@ fi
 
 #if logged in as root change theme which makes this more noticable
 if [[ $USER = "root" && -e $DOTS/p10k-root.zsh ]]; then
-    source $DOTS/p10k-root.zsh
+    source $DOTS/.p10k-root.zsh
 fi
 
 #set default editor to vim
