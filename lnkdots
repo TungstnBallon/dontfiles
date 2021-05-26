@@ -6,7 +6,7 @@ dotfls=(".zshrc" ".vimrc")
 
 #HELP
 use="Usage: $0 [OPTIONS] [PATH TO DOTFILES]"
-help="$use\nReplaces ${dotfls[@]} in the home directory with symbolic links to those dotfiles in another dirctory\n\nOPTIONS:\n\t--no-backup\t\tif dotfiles already exist in the home directory they'll be overwritten\n\r\t-S, --suffix <SUFFIX>\t\tfile suffix for created backups. .pre-lnkdots is the default\n\r\t-h, --help\t\tPrint this output"
+help="$use\nReplaces ${dotfls[@]} in the home directory with symbolic links to those dotfiles in another dirctory\n\nOPTIONS:\n\t--no-backup\t\t\tif dotfiles already exist in the home directory they'll be overwritten\n\r\t-S, --suffix <SUFFIX>\t\tfile suffix for created backups. '.pre-lnkdots' is the default\n\r\t-h, --help\t\t\tPrint this output"
 
 #Default Values
 backup=true
