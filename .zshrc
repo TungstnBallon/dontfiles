@@ -37,3 +37,5 @@ fi
 #set default editor to vim
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
