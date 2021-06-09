@@ -2,5 +2,14 @@
 alias ll='ls -lh --color=auto'
 alias la='ls -lAFh --color=auto'
 
+#pamac
+alias paup='pamac update'
+alias pain='pamac install'
+alias parein='pamac reinstall'
+alias parm='pamac remove'
+alias pase='pamac search'
+alias painf='pamac info'
+alias pals='pamac list' 
+
 #delete
 alias del='rm -rf'
