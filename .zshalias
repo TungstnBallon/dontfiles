@@ -11,5 +11,8 @@ alias pase='pamac search'
 alias painf='pamac info'
 alias pals='pamac list' 
 
+#remove symlinks from pwd
+alias unlnk='cd $(realpath $PWD)'
+
 #delete
 alias del='rm -rf'
