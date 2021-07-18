@@ -30,7 +30,7 @@ if [[ -e $DOTS/.zshalias ]]; then
 fi
 
 #if logged in as root change theme which makes this more noticable
-if [[ $USER = "root" && -e $DOTS/p10k-root.zsh ]]; then
+if [[ "$USER" = "root" && -e $DOTS/.p10k-root.zsh ]]; then
     source $DOTS/.p10k-root.zsh
 fi
 
